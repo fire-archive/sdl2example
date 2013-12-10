@@ -5,7 +5,7 @@ import Graphics.UI.SDL.General
 import Graphics.UI.SDL.Types
 import Graphics.UI.SDL.Events
 import Graphics.UI.SDL.Time
-
+import Graphics.UI.SDL.Keysym
 
 import Foreign
 import Data.Typeable
@@ -28,4 +28,14 @@ main = withInit [InitVideo] $
        renderClear render
        renderCopy render texture Nothing Nothing
        renderPresent render
-       delay 2000
+       loop
+
+loop :: IO ()
+loop
+    = do ev <- pollEvent
+         case fmap eventData ev of
+           Just Quit -> exitWith ExitSuccess
+           Just (KeyMovement _ True) _ False (Keysym Q  _ _)) -> exitWith ExitSuccess
+           _ -> return ()
+         loop
+
