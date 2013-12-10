@@ -19,6 +19,6 @@ executable sdlexample
   main-is: Test.hs             
   -- other-modules:       
   build-depends:       base ==4.6.*, SDL2 ==0.1.*, random ==1.0.*
-  Include-Dirs:   C:\SDL2-2.0.1\x86_64-w64-mingw32\include\SDL2
-  Extra-Lib-Dirs: C:\SDL2-2.0.1\x86_64-w64-mingw32\lib
-  Extra-Lib-Dirs: C:\SDL2-2.0.1\x86_64-w64-mingw32\bin
+  Include-Dirs:   C:\SDL2-2.0.1\i686-w64-mingw32\include\SDL2
+  Extra-Lib-Dirs: C:\SDL2-2.0.1\i686-w64-mingw32\lib
+  Extra-Lib-Dirs: C:\SDL2-2.0.1\i686-w64-mingw32\bin
