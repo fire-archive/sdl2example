@@ -4,6 +4,7 @@ import Graphics.UI.SDL.Video
 import Graphics.UI.SDL.General
 import Graphics.UI.SDL.Types
 import Graphics.UI.SDL.Events
+import Graphics.UI.SDL.Time
 
 
 import Foreign
@@ -27,4 +28,4 @@ main = withInit [InitVideo] $
        renderClear render
        renderCopy render texture Nothing Nothing
        renderPresent render
-
+       delay 2000
